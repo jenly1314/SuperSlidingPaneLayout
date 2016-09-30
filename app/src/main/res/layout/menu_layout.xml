@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/menu"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#9370DB"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:paddingTop="50dp"
+        android:paddingBottom="50dp"
+        android:textSize="20sp"
+        android:textColor="@android:color/white"/>
+        <Button
+            android:id="@+id/btnDefault"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Default"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/btnTranslation"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translation"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/btnScaleMenu"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scale Menu"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/btnScalePanel"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scale Panel"
+            android:background="@null"/>
+        <Button
+            android:id="@+id/btnScaleBoth"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Scale Both"
+            android:background="@null"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:gravity="center|bottom"
+        android:layout_margin="20dp"
+        android:text="Jenly"
+        android:background="@null" />
+</LinearLayout>
