@@ -31,28 +31,43 @@ compile 'com.king.widget:superslidingpanelayout:1.0'
 
 使用布局示例：
 ```Xml
-    <com.king.widget.SuperSwipeRefreshLayout
-        android:id="@+id/superSwipeRefreshLayout"
+<com.king.widget.SuperSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/superSlidingPaneLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:mode="scale_both">
+    <include layout="@layout/menu_layout"/>
+    <LinearLayout
+        android:orientation="vertical"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:direction="both">
-
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerView"
+        android:layout_height="match_parent">
+        <include layout="@layout/top_title_bar"/>
+        <TextView
+            android:id="@+id/tvMode"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"/>
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:text="Default"
+            android:textSize="24sp"/>
+    </LinearLayout>
 
-    </com.king.widget.SuperSwipeRefreshLayout>
+</com.king.widget.SuperSlidingPaneLayout>
 ```
 
 
-代码设置支持滑动刷新方向：
+代码设置侧滑模式效果：
 ```Java
-  superSwipeRefreshLayout.setDirection(SuperSwipeRefreshLayout.Direction.TOP);
- 
-  superSwipeRefreshLayout.setDirection(SuperSwipeRefreshLayout.Direction.BOTTOM);
-  
-  superSwipeRefreshLayout.setDirection(SuperSwipeRefreshLayout.Direction.BOTH);
+        superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.DEFAULT);
+        
+        superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.TRANSLATION);
+        
+        superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_MENU);
+        
+        superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_PANEL);
+        
+        superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_BOTH);
 ```
 
 更多使用详情请查看demo示例。
