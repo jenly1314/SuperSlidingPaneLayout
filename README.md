@@ -33,11 +33,9 @@ compile 'com.king.widget:superslidingpanelayout:1.0'
 使用布局示例：
 ```Xml
 <com.king.widget.SuperSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/superSlidingPaneLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:mode="scale_both">
+    android:layout_height="match_parent">
     <include layout="@layout/menu_layout"/>
     <LinearLayout
         android:orientation="vertical"
