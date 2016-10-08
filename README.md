@@ -15,27 +15,31 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
 <dependency>
   <groupId>com.king.widget</groupId>
   <artifactId>superslidingpanelayout</artifactId>
-  <version>1.0</version>
+  <version>1.0.1</version>
   <type>pom</type>
 </dependency>
 ```
 ###Gradle:
 ```
-compile 'com.king.widget:superslidingpanelayout:1.0'
+compile 'com.king.widget:superslidingpanelayout:1.0.1'
 ```
 ###Lvy:
 ```
-<dependency org='com.king.widget' name='superslidingpanelayout' rev='1.0'>
+<dependency org='com.king.widget' name='superslidingpanelayout' rev='1.0.1'>
   <artifact name='$AID' ext='pom'></artifact>
 </dependency>
 ```
 
 使用布局示例：
 ```Xml
+<?xml version="1.0" encoding="utf-8"?>
 <com.king.widget.SuperSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/superSlidingPaneLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/menu_bg1"
+    app:mode="default_">
     <include layout="@layout/menu_layout"/>
     <LinearLayout
         android:orientation="vertical"
@@ -53,6 +57,7 @@ compile 'com.king.widget:superslidingpanelayout:1.0'
     </LinearLayout>
 
 </com.king.widget.SuperSlidingPaneLayout>
+
 ```
 
 
