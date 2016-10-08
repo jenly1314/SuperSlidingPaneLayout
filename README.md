@@ -76,6 +76,8 @@ compile 'com.king.widget:superslidingpanelayout:1.0.1'
 
 更多使用详情请查看demo示例。
 
+相关博文:http://blog.csdn.net/jenly121/article/details/52757409
+
 ## License
 
     Copyright © 2015, 2016 Jenly Yu 
