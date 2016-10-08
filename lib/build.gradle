@@ -33,7 +33,7 @@ publish {
     userOrg = 'jenly'//bintray.com用户名
     groupId = 'com.king.widget'//jcenter上的路径
     artifactId = 'superslidingpanelayout'//项目名称
-    publishVersion = '1.0'//版本号
+    publishVersion = '1.0.1'//版本号
     desc = 'SuperSlidingPaneLayout for Android'//描述
     website = 'https://github.com/jenly1314/SuperSlidingPaneLayout'//网站
 }

@@ -74,6 +74,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_BOTH);
                 superSlidingPaneLayout.closePane();
                 break;
+            case R.id.btnTranslationScale:
+                tvMode.setText("Translation Scale");
+                superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.TRANSLATION_SCALE);
+                superSlidingPaneLayout.closePane();
+                break;
         }
     }
 }

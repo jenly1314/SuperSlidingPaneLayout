@@ -49,6 +49,13 @@
             android:layout_height="wrap_content"
             android:text="Scale Both"
             android:background="@null"/>
+    <Button
+            android:id="@+id/btnTranslationScale"
+            style="@style/onClick"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Translation Scale"
+            android:background="@null"/>
 
     <TextView
         android:layout_width="match_parent"

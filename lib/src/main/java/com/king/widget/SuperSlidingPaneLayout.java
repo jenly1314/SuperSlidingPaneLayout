@@ -222,7 +222,8 @@ public class SuperSlidingPaneLayout extends ViewGroup {
         TRANSLATION(1),
         SCALE_MENU(2),
         SCALE_PANEL(3),
-        SCALE_BOTH(4);
+        SCALE_BOTH(4),
+        TRANSLATION_SCALE(5);
 
         private int mValue;
 
@@ -307,6 +308,11 @@ public class SuperSlidingPaneLayout extends ViewGroup {
         final ViewConfiguration viewConfig = ViewConfiguration.get(context);
 
         setWillNotDraw(false);
+
+        final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SuperSlidingPaneLayout);
+        mMode = Mode.getFromInt(a.getInt(R.styleable.SuperSlidingPaneLayout_mode,0));
+
+        a.recycle();
 
         ViewCompat.setAccessibilityDelegate(this, new AccessibilityDelegate());
         ViewCompat.setImportantForAccessibility(this, ViewCompat.IMPORTANT_FOR_ACCESSIBILITY_YES);
@@ -1050,6 +1056,19 @@ public class SuperSlidingPaneLayout extends ViewGroup {
 
                 break;
             case SCALE_BOTH:
+                mMenuPanel.setPivotX(-0.2f * mMenuPanel.getWidth());
+                mMenuPanel.setPivotY(mMenuPanel.getHeight() / 2.0f);
+                mMenuPanel.setScaleX(scaleLeft);
+                mMenuPanel.setScaleY(scaleLeft);
+
+                panel.setPivotX(0);
+                panel.setPivotY(panel.getHeight()/2.0f);
+                panel.setScaleX(scale);
+                panel.setScaleY(scale);
+
+                break;
+            case TRANSLATION_SCALE:
+                mMenuPanel.setTranslationX((slideOffset-1) * mMenuPanel.getWidth() / 2.0f);
                 mMenuPanel.setPivotX(-0.2f * mMenuPanel.getWidth());
                 mMenuPanel.setPivotY(mMenuPanel.getHeight() / 2.0f);
                 mMenuPanel.setScaleX(scaleLeft);

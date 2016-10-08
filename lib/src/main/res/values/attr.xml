@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="SuperSlidingPaneLayout">
+        <attr name="mode">
+            <enum name="default_" value="0"/>
+            <enum name="translation" value="1" />
+            <enum name="scale_menu" value="2" />
+            <enum name="scale_panel" value="3" />
+            <enum name="scale_both" value="4" />
+            <enum name="translation_scale" value="5" />
+        </attr>
+    </declare-styleable>
+</resources>
