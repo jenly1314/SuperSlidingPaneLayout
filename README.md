@@ -15,17 +15,17 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
 <dependency>
   <groupId>com.king.widget</groupId>
   <artifactId>superslidingpanelayout</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
 </dependency>
 ```
 ###Gradle:
 ```
-compile 'com.king.widget:superslidingpanelayout:1.0.1'
+compile 'com.king.widget:superslidingpanelayout:1.0.2'
 ```
 ###Lvy:
 ```
-<dependency org='com.king.widget' name='superslidingpanelayout' rev='1.0.1'>
+<dependency org='com.king.widget' name='superslidingpanelayout' rev='1.0.2'>
   <artifact name='$AID' ext='pom'></artifact>
 </dependency>
 ```

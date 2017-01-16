@@ -26,14 +26,14 @@ android {
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
     testCompile 'junit:junit:4.12'
-    compile 'com.android.support:appcompat-v7:24.1.1'
+    provided 'com.android.support:appcompat-v7:24.1.+'
 }
 
 publish {
     userOrg = 'jenly'//bintray.com用户名
     groupId = 'com.king.widget'//jcenter上的路径
     artifactId = 'superslidingpanelayout'//项目名称
-    publishVersion = '1.0.1'//版本号
+    publishVersion = '1.0.2'//版本号
     desc = 'SuperSlidingPaneLayout for Android'//描述
     website = 'https://github.com/jenly1314/SuperSlidingPaneLayout'//网站
 }
