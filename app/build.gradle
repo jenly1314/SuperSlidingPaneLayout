@@ -5,7 +5,7 @@ android {
     buildToolsVersion "24.0.2"
 
     defaultConfig {
-        applicationId "com.king.app"
+        applicationId "com.king.sliding"
         minSdkVersion 11
         targetSdkVersion 24
         versionCode 1

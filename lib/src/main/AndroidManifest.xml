@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.king.widget">
+    package="com.king.view.superslidingpanelayout">
 
     <application
         android:allowBackup="true"

@@ -1,4 +1,4 @@
-package com.king.widget;
+package com.king.view.superslidingpanelayout;
 
 import org.junit.Test;
 

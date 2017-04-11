@@ -14,7 +14,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.king.widget;
+package com.king.view.superslidingpanelayout;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -211,6 +211,9 @@ public class SuperSlidingPaneLayout extends ViewGroup {
         }
     }
 
+    private float mEdgeSlop;
+
+    private boolean mIsCompatSliding;
 
     private View mMenuPanel;
 
@@ -307,10 +310,14 @@ public class SuperSlidingPaneLayout extends ViewGroup {
 
         final ViewConfiguration viewConfig = ViewConfiguration.get(context);
 
+        mEdgeSlop = viewConfig.getScaledEdgeSlop();
+
         setWillNotDraw(false);
 
         final TypedArray a = context.obtainStyledAttributes(attrs, R.styleable.SuperSlidingPaneLayout);
         mMode = Mode.getFromInt(a.getInt(R.styleable.SuperSlidingPaneLayout_mode,0));
+
+        mIsCompatSliding = a.getBoolean(R.styleable.SuperSlidingPaneLayout_compat_sliding,false);
 
         a.recycle();
 
@@ -851,6 +858,20 @@ public class SuperSlidingPaneLayout extends ViewGroup {
             case MotionEvent.ACTION_MOVE: {
                 final float x = ev.getX();
                 final float y = ev.getY();
+
+                // The user should always be able to "close" the pane, so we only check
+                // for child scrollability if the pane is currently closed.
+                if (mIsCompatSliding && mInitialMotionX > mEdgeSlop && !isOpen() && canScroll(this, false,
+                        Math.round(x - mInitialMotionX), Math.round(x), Math.round(y))) {
+
+                    // How do we set super.mIsUnableToDrag = true?
+
+                    // send the parent a cancel event
+                    MotionEvent cancelEvent = MotionEvent.obtain(ev);
+                    cancelEvent.setAction(MotionEvent.ACTION_CANCEL);
+                    return super.onInterceptTouchEvent(cancelEvent);
+                }
+
                 final float adx = Math.abs(x - mInitialMotionX);
                 final float ady = Math.abs(y - mInitialMotionY);
                 final int slop = mDragHelper.getTouchSlop();

@@ -1,4 +1,4 @@
-package com.king.app;
+package com.king.sliding;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

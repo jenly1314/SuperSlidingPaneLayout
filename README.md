@@ -1,4 +1,5 @@
 # SuperSlidingPaneLayout
+[![Download](https://img.shields.io/badge/download-App-blue.svg)](https://raw.githubusercontent.com/jenly1314/SuperSlidingPaneLayout/master/app/app-release.apk)
 [![](https://jitpack.io/v/jenly1314/SuperSlidingPaneLayout.svg)](https://jitpack.io/#jenly1314/SuperSlidingPaneLayout)
 [![License](https://img.shields.io/badge/license-Apche%202.0-blue.svg)](http://www.apache.org/licenses/LICENSE-2.0)
 [![Blog](https://img.shields.io/badge/blog-Jenly-9933CC.svg)](http://blog.csdn.net/jenly121)
@@ -13,19 +14,19 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
 ###Maven：
 ```
 <dependency>
-  <groupId>com.king.widget</groupId>
+  <groupId>com.king.view</groupId>
   <artifactId>superslidingpanelayout</artifactId>
-  <version>1.0.2</version>
+  <version>1.1.0</version>
   <type>pom</type>
 </dependency>
 ```
 ###Gradle:
 ```
-compile 'com.king.widget:superslidingpanelayout:1.0.2'
+compile 'com.king.view:superslidingpanelayout:1.1.0'
 ```
 ###Lvy:
 ```
-<dependency org='com.king.widget' name='superslidingpanelayout' rev='1.0.2'>
+<dependency org='com.king.view' name='superslidingpanelayout' rev='1.1.0'>
   <artifact name='$AID' ext='pom'></artifact>
 </dependency>
 ```
@@ -33,13 +34,14 @@ compile 'com.king.widget:superslidingpanelayout:1.0.2'
 使用布局示例：
 ```Xml
 <?xml version="1.0" encoding="utf-8"?>
-<com.king.widget.SuperSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<com.king.view.superslidingpanelayout.SuperSlidingPaneLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/superSlidingPaneLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/menu_bg1"
-    app:mode="default_">
+    app:mode="default_"
+    app:compat_sliding="false">
     <include layout="@layout/menu_layout"/>
     <LinearLayout
         android:orientation="vertical"
@@ -56,7 +58,7 @@ compile 'com.king.widget:superslidingpanelayout:1.0.2'
             android:textSize="24sp"/>
     </LinearLayout>
 
-</com.king.widget.SuperSlidingPaneLayout>
+</com.king.view.superslidingpanelayout.SuperSlidingPaneLayout>
 
 ```
 

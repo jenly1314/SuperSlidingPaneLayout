@@ -1,4 +1,4 @@
-package com.king.app;
+package com.king.sliding;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,7 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import com.king.widget.SuperSlidingPaneLayout;
+import com.king.view.superslidingpanelayout.SuperSlidingPaneLayout;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(com.king.sliding.R.layout.activity_main);
         initUI();
     }
 
@@ -39,7 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     @Override
     public void onClick(View view) {
-        if(view.getId()!=R.id.btnLeft && !superSlidingPaneLayout.isOpen()){
+        if(view.getId()!= com.king.sliding.R.id.btnLeft && !superSlidingPaneLayout.isOpen()){
             return;
         }
         switch (view.getId()){
@@ -66,7 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_PANEL);
                 superSlidingPaneLayout.closePane();
                 break;
-            case R.id.btnTranslationScale:
+            case R.id.btnScaleBoth:
+                tvMode.setText("Scale Both");
+                superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_BOTH);
+                superSlidingPaneLayout.closePane();
+                break;
+            case com.king.sliding.R.id.btnTranslationScale:
                 tvMode.setText("Translation Scale");
                 superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.TRANSLATION_SCALE);
                 superSlidingPaneLayout.closePane();
