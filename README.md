@@ -9,9 +9,9 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
 ![Image](https://github.com/jenly1314/SuperSlidingPaneLayout/blob/master/GIF.gif)
 
 
-##引入
+## 引入
 
-###Maven：
+### Maven：
 ```
 <dependency>
   <groupId>com.king.view</groupId>
@@ -20,11 +20,11 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
   <type>pom</type>
 </dependency>
 ```
-###Gradle:
+### Gradle:
 ```
 compile 'com.king.view:superslidingpanelayout:1.1.0'
 ```
-###Lvy:
+### Lvy:
 ```
 <dependency org='com.king.view' name='superslidingpanelayout' rev='1.1.0'>
   <artifact name='$AID' ext='pom'></artifact>
@@ -79,6 +79,20 @@ compile 'com.king.view:superslidingpanelayout:1.1.0'
 更多使用详情请查看demo示例。
 
 相关博文:http://blog.csdn.net/jenly121/article/details/52757409
+
+
+## 关于我
+   Name: Jenly
+
+   Email: jenly1314@gmail.com / jenly1314@vip.qq.com
+
+   CSDN: http://www.csdn.net/jenly121
+
+   Github: https://github.com/jenly1314
+
+   微信公众号:
+
+   ![公众号](http://olambmg9j.bkt.clouddn.com/jenly666.jpg)
 
 ## License
 
