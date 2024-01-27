@@ -80,9 +80,9 @@ SuperSlidingPaneLayout是在SlidingPaneLayout的基础之上扩展修改，新�
         superSlidingPaneLayout.setMode(SuperSlidingPaneLayout.Mode.SCALE_BOTH);
 ```
 
-更多使用详情请查看demo示例。
+更多使用详情，请查看[app](app)中的源码使用示例或直接查看[API帮助文档](https://jitpack.io/com/github/jenly1314/SuperSlidingPaneLayout/latest/javadoc/)
 
-相关博文:http://blog.csdn.net/jenly121/article/details/52757409
+相关博文：[传送门](http://blog.csdn.net/jenly121/article/details/52757409)
 
 ## 赞赏
 如果您喜欢SuperSlidingPaneLayout，或感觉SuperSlidingPaneLayout帮助到了您，可以点右上角“Star”支持一下，您的支持就是我的动力，谢谢 :smiley:
